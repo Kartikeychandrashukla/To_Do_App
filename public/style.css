@@ -1,0 +1,136 @@
+/* style.css */
+
+/* Animated dark gradient background */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: white;
+    animation: animatedBackground 15s ease infinite;
+    background: linear-gradient(-45deg, #0f0f0f, #1c1c1c, #2a2a2a, #1c1c1c);
+    background-size: 400% 400%;
+    min-height: 100vh;
+}
+
+/* Background animation keyframes */
+@keyframes animatedBackground {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Container styling */
+.container {
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+/* Input box styling */
+input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    margin-right: 10px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+/* Button styling */
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+/* Task list styling */
+ul#tasklist {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+ul#tasklist li {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 25px; /* Makes the corners round */
+    border: 2px solid #555; /* Adds a border around each task */
+    transition: border 0.3s ease; /* Smooth transition effect for border */
+}
+
+ul#tasklist li:hover {
+    border: 2px solid #28a745; /* Change border color on hover */
+}
+.quote {
+    font-style: italic;
+    font-size: 1.2rem;
+    color: #ccc;
+    margin-bottom: 30px;
+    animation: fadeIn 2s ease-in;
+}
+
+/* Optional: subtle fade-in animation */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+.task-item {
+    background-color: #333;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    border: 2px solid white;
+}
+
+.task-text {
+    flex-grow: 1;
+    text-align: left;
+}
+
+/* Already suggested earlier */
+.delete-btn {
+    color: #ff4d4d;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 2px 8px;
+    border-radius: 50%;
+    background-color: #1a1a1a;
+    transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.delete-btn:hover {
+    background-color: #ff4d4d;
+    color: white;
+    transform: scale(1.2);
+}
+.task-text {
+  display: inline-block;
+  width: 80%;
+}
+
+.task-text span {
+  font-size: 0.9em;
+  color: #ccc;
+}
+.due-date {
+  margin-left: 10px;
+  font-size: 0.9em;
+  color: red !important;
+/* 🔴 Red due date */
+  font-weight: bold;
+}
+
